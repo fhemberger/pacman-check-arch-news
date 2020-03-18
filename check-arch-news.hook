@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Depends = curl
+Depends = openssl
+When = PreTransaction
+Exec = /usr/share/libalpm/scripts/check-arch-news
+Description = Checking Arch Linux news for packages needing manual intervention...
